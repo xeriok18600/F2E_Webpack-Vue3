@@ -1,0 +1,48 @@
+*
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
+    border: solid 1px red
+
+html,body
+    background-color: $background
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+.todo
+    background-color: $primary
+    width: 400px
+    border-radius: 5px
+    padding: 20px 30px 30px 30px
+    .add-task
+        display: flex
+        justify-content: center
+        flex-direction: column
+        &__today
+            width: 100%
+            text-align: center
+            color: black
+            font-size: $info
+            font-weight: bold
+            padding-bottom: 5px
+        &__btn
+            font-size: $info
+    .list
+        padding-top: 20px
+        .item
+            background-color: $white
+            display: flex
+            flex-direction: column
+            border-radius: 5px
+            padding: 20px 0px 30px 30px
+            &__content
+                flex: 1
+                display: inline-flex
+                justify-content: space-between
+            &__title
+                font-weight: bold
+                font-size: $title              
+            &__info
+                padding-top: 10px
+                flex: 2
