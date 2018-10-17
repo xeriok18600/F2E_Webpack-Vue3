@@ -9,13 +9,24 @@ import './sass/style.sass'
 //   }
 // })
 
+
 new Vue({
   el: '#app',
   data: {
     tabPosition: 'bottom',
     input: '',
     value1: '',
-    textarea: ''
+    textarea: '',
+    nowDate: new Date(),
+  },
+  filters: {
+    formDate: function (value) {
+      var date = new Date()
+      var year = date.getFullYear()
+      var month = date.getMonth() + 1 //預設是0
+      var day = date.getHours()
+      return year + '-' + month + '-' + day
+    }
   },
   methods: {
     openFrom: function () {
@@ -25,6 +36,9 @@ new Vue({
     btnCancel: function () {
       document.getElementById('addForm').classList.add('dis-no')
       document.getElementById('addTask').classList.remove('dis-no')
+    },
+    taskModify: function () {
+
     }
   }
 })

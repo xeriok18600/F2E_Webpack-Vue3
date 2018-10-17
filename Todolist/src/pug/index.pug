@@ -11,7 +11,7 @@ html(lang="en")
         #app
             .todo
                 .add-task#addTask
-                    .add-task__today 2018-10-11
+                    .add-task__today {{nowDate | formDate}}
                     el-button.add-task__btn(v-on:click='openFrom')
                         i.el-icon-plus Add Task  
                 .add-form#addForm.dis-no
@@ -38,10 +38,27 @@ html(lang="en")
                             .item__title Mission 1
                             .item__content--modify
                                 i.el-icon-star-off.i-24.info.p-l-10
-                                i.el-icon-edit.i-24.info
+                                i.el-icon-edit.i-24.info(v-on:click='taskModify')
                         .item__info
                             i.el-icon-date.i-24.info
                             span.info 10/11
+                        .add-form.dis-no
+                            el-input(v-model='input', placeholder='Type Something Here…')
+                            .add-form__cotent
+                                .add-form__input
+                                    i.el-icon-date.p-l-10.i-24
+                                    el-date-picker(v-model='value1', type='datetime', placeholder='Choose time')  
+                                .add-form__input
+                                    i.el-icon-document.p-l-10.i-24
+                                    label.add-form__input-label(for="uploadFile") +
+                                        input#uploadFile.add-form__input-label--upload(type='file')
+                                .add-form__input
+                                    i.el-icon-tickets.p-l-10.i-24
+                                    el-input(type='textarea', :rows='2', placeholder='Type your memo here…', v-model='textarea')
+                                .add-form__input
+                                    el-button-group.add-form__input-btnGroup
+                                        el-button.add-form__input-btn(icon='el-icon-close',v-on:click='btnCancel' ) Cancel
+                                        el-button.add-form__input-btn(type='primary', icon='el-icon-check', disabled) Add Task
                     .item
                         .item__content
                             i.el-icon-circle-check-outline.i-24.info
