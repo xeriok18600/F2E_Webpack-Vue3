@@ -1,44 +1,67 @@
 import './sass/style.sass'
-// import './pug/index.pug'
-// new Vue({
-//   el: '#app',
-//   data: function () {
-//     return {
-//       visible: false
-//     }
-//   }
-// })
-
 
 new Vue({
   el: '#app',
   data: {
     tabPosition: 'bottom',
-    input: '',
     value1: '',
     textarea: '',
     nowDate: new Date(),
+    formShow: true,
+    formShow2: true,
+    btnShow: false,
+    addLists: {
+      title: '',
+      date: ''
+    },
+    filterLists: [],
+    todoLists: [{
+      title: 'Mission 1',
+      date: '2018-10-08',
+      status: false,
+      isStar: false
+    }],
   },
   filters: {
-    formDate: function (value) {
+    formDate() {
       var date = new Date()
       var year = date.getFullYear()
       var month = date.getMonth() + 1 //預設是0
       var day = date.getHours()
-      return year + '-' + month + '-' + day
+      var newDate = year + '-' + month + '-' + day
+      return newDate
     }
   },
+  mounted() {
+    this.filterLists = this.todoLists
+  },
   methods: {
-    openFrom: function () {
-      document.getElementById('addTask').classList.add('dis-no')
-      document.getElementById('addForm').classList.remove('dis-no')
+    openFrom() {
+      this.formShow = !this.formShow
     },
-    btnCancel: function () {
-      document.getElementById('addForm').classList.add('dis-no')
-      document.getElementById('addTask').classList.remove('dis-no')
+    btnCancel() {
+      this.formShow = !this.formShow
     },
-    taskModify: function () {
-
+    btnSure() {
+      this.todoLists.push({
+        title: this.addLists.title,
+        date: this.addLists.date,
+        status: false,
+        isStar: false
+      })
+      console.log(this.todoLists)
+    },
+    todoModify() {
+      this.formShow2 = !this.formShow2
+    },
+    todoCancel() {
+      this.formShow2 = !this.formShow2
+    },
+    isDate(date) {
+      return (new Date(date).getMonth() + 1) + '/' + new Date(date).getDate()
     }
+    // taskSure() {
+
+    // }
   }
 })

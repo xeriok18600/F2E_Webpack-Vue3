@@ -10,76 +10,51 @@ html(lang="en")
     body
         #app
             .todo
-                .add-task#addTask
-                    .add-task__today {{nowDate | formDate}}
-                    el-button.add-task__btn(v-on:click='openFrom')
+                .add-task(v-if='formShow')
+                    .add-task__today {{isDate(nowDate)}}
+                    el-button.add-task__btn(@click='openFrom')
                         i.el-icon-plus Add Task  
-                .add-form#addForm.dis-no
-                    el-input(v-model='input', placeholder='Type Something Here…')
+                .add-form(v-else)
+                    el-input(v-model='addLists.title', placeholder='Type Something Here…')
+                    h5 {{addLists.title}}
                     .add-form__cotent
                         .add-form__input
                             i.el-icon-date.p-l-10.i-24
-                            el-date-picker(v-model='value1', type='datetime', placeholder='Choose time')  
-                        .add-form__input
-                            i.el-icon-document.p-l-10.i-24
-                            label.add-form__input-label(for="uploadFile") +
-                                input#uploadFile.add-form__input-label--upload(type='file')
-                        .add-form__input
-                            i.el-icon-tickets.p-l-10.i-24
-                            el-input(type='textarea', :rows='2', placeholder='Type your memo here…', v-model='textarea')
+                            el-date-picker(v-model='addLists.date', type='date', placeholder='Choose time')  
                         .add-form__input
                             el-button-group.add-form__input-btnGroup
-                                el-button.add-form__input-btn(icon='el-icon-close',v-on:click='btnCancel' ) Cancel
-                                el-button.add-form__input-btn(type='primary', icon='el-icon-check', disabled) Add Task
-                .list
-                    .item
+                                el-button.add-form__input-btn(icon='el-icon-close',@click='btnCancel' ) Cancel
+                                el-button.add-form__input-btn(type='primary', icon='el-icon-check', :disabled='btnShow', @click='btnSure') Add Task
+                .list(v-for='(todo, index) in filterLists')
+                    .item(v-if='formShow2')
                         .item__content
                             i.el-icon-circle-check-outline.i-24.info
-                            .item__title Mission 1
+                            .item__title {{todo.title}}
                             .item__content--modify
                                 i.el-icon-star-off.i-24.info.p-l-10
-                                i.el-icon-edit.i-24.info(v-on:click='taskModify')
+                                i.el-icon-edit.i-24.info(@click='todoModify')
                         .item__info
                             i.el-icon-date.i-24.info
-                            span.info 10/11
-                        .add-form.dis-no
-                            el-input(v-model='input', placeholder='Type Something Here…')
-                            .add-form__cotent
-                                .add-form__input
-                                    i.el-icon-date.p-l-10.i-24
-                                    el-date-picker(v-model='value1', type='datetime', placeholder='Choose time')  
-                                .add-form__input
-                                    i.el-icon-document.p-l-10.i-24
-                                    label.add-form__input-label(for="uploadFile") +
-                                        input#uploadFile.add-form__input-label--upload(type='file')
-                                .add-form__input
-                                    i.el-icon-tickets.p-l-10.i-24
-                                    el-input(type='textarea', :rows='2', placeholder='Type your memo here…', v-model='textarea')
-                                .add-form__input
-                                    el-button-group.add-form__input-btnGroup
-                                        el-button.add-form__input-btn(icon='el-icon-close',v-on:click='btnCancel' ) Cancel
-                                        el-button.add-form__input-btn(type='primary', icon='el-icon-check', disabled) Add Task
-                    .item
-                        .item__content
-                            i.el-icon-circle-check-outline.i-24.info
-                            .item__title Mission 2
-                            .item__content--modify
-                                i.el-icon-star-off.i-24.info.p-l-10
-                                i.el-icon-edit.i-24.info
+                            span.info {{isDate(todo.date)}}
+                    .add-form(v-else)
+                        el-input(v-model='todoLists.title', placeholder='Type Something Here…')
+                        .add-form__cotent
+                            .add-form__input
+                                i.el-icon-date.p-l-10.i-24
+                                el-date-picker(v-model='todoLists.date', type='date', placeholder='Choose time')  
+                            .add-form__input
+                                i.el-icon-document.p-l-10.i-24
+                                label.add-form__input-label(for="uploadFile") +
+                                    input#uploadFile.add-form__input-label--upload(type='file')
+                            .add-form__input
+                                el-button-group.add-form__input-btnGroup
+                                    el-button.add-form__input-btn(icon='el-icon-close',@click='todoCancel' ) Cancel
+                                    el-button.add-form__input-btn(type='primary', icon='el-icon-check', disabled) Add Task
                 .nav
                     el-tabs.nav__tabs(:tab-position='tabPosition')
                         el-tab-pane(label='All')
                         el-tab-pane(label='In progress')
                         el-tab-pane(label='Finish')
-
-
-
-
-
-
-
-
-
 
 
         script(src="https://cdn.jsdelivr.net/npm/vue")
