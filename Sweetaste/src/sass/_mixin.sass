@@ -1,0 +1,25 @@
+@mixin bg($img,$w,$h)   
+  background: url("../images/#{$img}")  
+  width: $w
+  height: $h
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+@mixin svg($w,$h)
+  width: $w
+  height: $h
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+
+@mixin inner_text($left,$justify)
+  position: absolute
+  left: $left
+  grid-row: 1/2
+  grid-column: 2/4
+  justify-self: $justify
+  align-self: center
+  height: 300px
+
