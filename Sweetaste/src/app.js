@@ -1,6 +1,6 @@
-import './sass/style.sass'
+import './sass/style.sass';
 
-new Vue({
-  el: '#app',
-  data: {}
-})
+// new Vue({
+//     el: '#app',
+//     data: {},
+// });

@@ -14,19 +14,37 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.sass$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                'css-loader',
-                'sass-loader'
-            ]
-        }, {
-            test: /\.pug$/,
-            use: [
-                'html-loader',
-                'pug-html-loader'
-            ]
-        }]
+                test: /\.sass$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }, {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [{
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './img/'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.pug$/,
+                use: [
+                    'html-loader',
+                    'pug-html-loader'
+                ]
+            }
+        ]
     },
     plugins: [
         new MiniCssExtractPlugin({
