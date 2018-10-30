@@ -1,6 +1,6 @@
 # F2E_Webpack&Vue3
 
-Todolist -> Webpack 3 + Vue + Element
+Todolist -> Webpack 4 + Vue + Element
 
-Sweetaste -> Webpack 3 + Vue + Element + RWD + Flex + api
+Sweetaste -> Webpack 4 + Vue + Element + RWD + Flex + api
 
