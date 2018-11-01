@@ -13,19 +13,23 @@ html(lang="en")
             header
                 .header__container
                     .header__container--logo
-                    .header__container--navbar
-                        a(href="") 首頁
-                        a(href="") 甜點
-                        a(href="") 登入
-                        a(href="")
-                            i.fas.fa-shopping-cart  
+                    ul.header__container--navbar
+                        li  
+                            a(href="") 首頁
+                        li
+                            a(href="") 甜點
+                        li
+                            a(href="") 登入
+                        li      
+                            a(href="")
+                                i.fas.fa-shopping-cart  
             section
                 .section__container
                     .section__container--background
-                    .section__container--group
-                        .group-today
-                        .group-top
-                        .group-new
+                    ul.section__container--group
+                        li.group-today
+                        li.group-top
+                        li.group-new
 
             footer
         script(src="https://cdn.jsdelivr.net/npm/vue")
