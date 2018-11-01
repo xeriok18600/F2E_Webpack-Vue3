@@ -1,11 +1,29 @@
+*
+    // border: solid 1px black !important
+
 html,body
     background-color: $primary_color
-    font-family: $default
+    max-width: 100%
     width: 100vw
-header
-    max-width: $desktop_width
-    .header__container
-        &--logo
-            background: url('/dist/img/logo-all-dark.svg')
-            +svg(50px,50px)
 
+header
+    margin-top: 30px
+    display: flex
+    justify-content: center
+    .header__container
+        width: $desktop_width
+        display: flex
+        justify-content: space-between
+        &--logo
+            +bg('logo-all-dark.svg',300px,55px)
+        &--navbar
+            width: 370px
+            display: flex
+            align-self: center
+            justify-content: space-between
+            a
+                color: $target_color
+                font-weight: bold
+
+
+    

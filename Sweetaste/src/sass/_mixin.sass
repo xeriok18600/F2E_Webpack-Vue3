@@ -1,12 +1,13 @@
 @mixin bg($img,$w,$h)   
-  background: url("../images/#{$img}")  
+  background: url("/dist/img/#{$img}")  
   width: $w
   height: $h
   background-position: center
   background-size: cover
   background-repeat: no-repeat
 
-@mixin svg($w,$h)
+@mixin bg-url($img,$w,$h)
+  background: url('#{$img}')
   width: $w
   height: $h
   background-position: center
