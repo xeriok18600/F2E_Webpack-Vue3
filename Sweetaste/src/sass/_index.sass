@@ -5,23 +5,46 @@ section
     .section__container
         width: $desktop_width
         &--background
-            // background: url('https://bit.ly/2OhbMHr')
             +bg-url('https://bit.ly/2OhbMHr',100%,500px)
         &--group
             display: flex
             justify-content: center
             transform: translateY(-30%)
-            -webkit-filter: blur(5px)
-            -moz-filter: blur(5px)
-            -ms-filter: blur(5px)    
-            filter: blur(5px)
             overflow: hidden
-            .group-today
-                +bg-url('https://bit.ly/2R5tqwD',260px,260px)
-                border-right: solid 1px $primary_color
-            .group-top
-                +bg-url('https://bit.ly/2Dwoxd7',260px,260px)
-                border-right: solid 1px $primary_color
-            .group-new
-                +bg-url('https://bit.ly/2OUteif',260px,260px)
+            .group_today
+                width: 260px
+                height: 260px
+                cursor: pointer
+                position: relative
+                &-img
+                    +bg-url('https://bit.ly/2R5tqwD',100%,100%)
+                    @extend %img_filter
+                &-bg
+                    +bg-color-center($spec_color)
+                &-word
+                    +word-center($target_color)
+            .group_top
+                width: 260px
+                height: 260px
+                cursor: pointer
+                position: relative
+                &-img
+                    +bg-url('https://bit.ly/2Dwoxd7',100%,100%)
+                    @extend %img_filter
+                &-bg
+                    +bg-color-center($target_color)
+                &-word
+                    +word-center($primary_color)
+            .group_new
+                width: 260px
+                height: 260px
+                cursor: pointer
+                position: relative
+                &-img
+                    +bg-url('https://bit.ly/2OUteif',100%,100%)
+                    @extend %img_filter
+                &-bg
+                    +bg-color-center($target_color)
+                &-word
+                    +word-center($primary_color)
 

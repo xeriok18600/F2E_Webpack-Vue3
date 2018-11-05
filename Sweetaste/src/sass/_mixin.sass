@@ -14,6 +14,27 @@
   background-size: cover
   background-repeat: no-repeat
 
+@mixin bg-color-center($color)
+  background-color: $color
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  opacity: 0.8
+
+@mixin word-center($color)
+  color: $color
+  position: absolute
+  -webkit-writing-mode: vertical-lr
+  writing-mode: vertical-lr 
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  font-size: 24px    
+  letter-spacing: 5px 
+
 
 @mixin inner_text($left,$justify)
   position: absolute
