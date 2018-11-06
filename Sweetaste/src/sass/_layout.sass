@@ -26,24 +26,83 @@ header
                 font-weight: bold
 footer
     max-height: 460px
-    // flex-direction: column
     margin-top: 60px
-    .footer__subscription   
-        width: 100%    
+    .footer__subscription       
         background-color: $target_color
-        display: flex
-        justify-content: center
+        padding: 40px
         &--container
-            width: $desktop_width
+            margin: 0 auto
+            display: flex
+            justify-content: space-between
+            max-width: 900px
             .logo-group
                 display: flex
                 align-items: center
                 width: 280px
                 .group-img
                     +bg('logo-light.svg',40px,40px)
+                    margin-right: 20px
                 .group-title
                     text-align: center
+                    font-size: 24px
+                    color: $second_color
+            .send-mail
+                width: 380px
+                height: 60px
+                display: flex
+                position: relative
+                .mail-icon
+                    font-size: 24px
+                    color: $target_color
+                    position: absolute
+                    left: 20px
+                    top: 50%
+                    transform: translateY(-50%)          
+                input
+                    width: calc(100% - 64px - 45px)
+                    padding-left: 45px
+                    border: none
+                button
+                    width: calc(100% - 320px)
+                    background-color: $spec_color
+                    border: none
     .footer__info
+        background-color: $second_color
+        padding: 40px
+        &--container
+            margin: 0 auto
+            max-width: 900px
+            .total-info
+                width: 100%
+                display: flex
+                justify-content: space-between
+                .company-info
+                    .info-title
+                        +bg('logotype-lg-dark.svg',170px,27px)
+                    .info-address
+                        margin-top: 115px
+                        li
+                            color: $target_color
+                            padding-bottom: 5px
+                .info-img
+                    +bg('sm-today-good-eat.svg',60px,220px)
+            .social-info
+                display: flex
+                width: 100%
+                margin-top: 30px
+                justify-content: space-between
+                .social-icon
+                    display: flex
+                    .icon-fb
+                        margin-right: 8px
+                        +bg('ic-facebook.svg',32px,32px)
+                    .icon-line
+                        +bg('ic-line@.svg',32px,32px)
+                .social-remark
+                    align-self: center
+                    color: $target_color
+
+
 
 
 

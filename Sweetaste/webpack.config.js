@@ -26,7 +26,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: './img/'
+                            outputPath: 'img/',
                         }
                     },
                     {
@@ -53,6 +53,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pug/index.pug',
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pug/product.pug',
+            filename: 'product.html'
         })
     ]
 };

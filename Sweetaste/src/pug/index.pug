@@ -15,9 +15,9 @@ html(lang="en")
                     .header__container--logo
                     ul.header__container--navbar
                         li  
-                            a(href="") 首頁
+                            a(href="/dist/index.html") 首頁
                         li
-                            a(href="") 甜點
+                            a(href="/dist/product.html") 甜點
                         li
                             a(href="") 登入
                         li      
@@ -87,12 +87,29 @@ html(lang="en")
                         .logo-group
                             .group-img
                             .group-title 訂閱你我的甜蜜郵件
-                        .send-mail             
+                        .send-mail
+                            i.mail-icon.fas.fa-envelope
+                            input(type="text", name="")
+                            button
+                                i.fas.fa-arrow-right                  
                 .footer__info
                     .footer__info--container
+                        .total-info
+                            .company-info
+                                .info-title
+                                ul.info-address
+                                    li 07-1234-5678
+                                    li sweetaste@email.com
+                                    li 800 高雄市新興區幸福路 520 號
+                            .info-img
+                        .social-info
+                            .social-icon
+                                .icon-fb
+                                .icon-line
+                            .social-remark © 2018 Sweetaste* All Rights Reserved
 
         script(src="https://cdn.jsdelivr.net/npm/vue")
-        script(src="https://unpkg.com/element-ui/lib/index.js")
+        //- script(src="https://unpkg.com/element-ui/lib/index.js")
         script(src="/dist/app.bundle.js")
             
 
