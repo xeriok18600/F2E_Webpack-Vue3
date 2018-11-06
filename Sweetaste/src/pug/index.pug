@@ -27,22 +27,70 @@ html(lang="en")
                 .section__container
                     .section__container--background
                     ul.section__container--group
-                        li.group_today
-                            .group_today-img
-                            .group_today-bg
-                            .group_today-word 本日精選
-                        li.group_top
-                            .group_top-img
-                            .group_top-bg
-                            .group_top-word 人氣推薦
-                        li.group_new
-                            .group_new-img
-                            .group_new-bg
-                            .group_new-word 新品上市
-            section
+                        li.group-today
+                            .group-today-img
+                            .group-today-bg
+                            .group-today-word 本日精選
+                        li.group-top
+                            .group-top-img
+                            .group-top-bg
+                            .group-top-word 人氣推薦
+                        li.group-new
+                            .group-new-img
+                            .group-new-bg
+                            .group-new-word 新品上市
+            section.story
                 .section__story
-
+                    .section__story--title
+                    .section__story--content
+                        p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+                        p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+                    .section__story--img
+            section.story
+                .section__story
+                    .section__story--title.opposite-title
+                    .section__story--content.opposite-content
+                        p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+                        p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
+                    .section__story--img.opposite-img
+            section
+                .svg__center
+            section
+                ul.card__container
+                    li.card__container--product
+                        .product-img
+                            .product-today-featured 本日精選
+                            i.far.fa-heart
+                        .product-info
+                            .product-info-name 焦糖馬卡龍
+                            .product-info-price NT$ 450
+                        button 加入購物車
+                    li.card__container--product
+                        .product-img
+                            .product-today-featured 本日精選
+                            i.far.fa-heart
+                        .product-info
+                            .product-info-name 焦糖馬卡龍
+                            .product-info-price NT$ 450
+                        button 加入購物車
+                    li.card__container--product
+                        .product-img
+                            .product-today-featured 本日精選
+                            i.far.fa-heart
+                        .product-info
+                            .product-info-name 焦糖馬卡龍
+                            .product-info-price NT$ 450
+                        button 加入購物車
             footer
+                .footer__subscription
+                    .footer__subscription--container
+                        .logo-group
+                            .group-img
+                            .group-title 訂閱你我的甜蜜郵件
+                        .send-mail             
+                .footer__info
+                    .footer__info--container
+
         script(src="https://cdn.jsdelivr.net/npm/vue")
         script(src="https://unpkg.com/element-ui/lib/index.js")
         script(src="/dist/app.bundle.js")

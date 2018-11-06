@@ -10,12 +10,13 @@ section
             display: flex
             justify-content: center
             transform: translateY(-30%)
-            overflow: hidden
-            .group_today
+            .group-today
                 width: 260px
                 height: 260px
                 cursor: pointer
                 position: relative
+                overflow: hidden
+                border-right: 1px solid $primary_color 
                 &-img
                     +bg-url('https://bit.ly/2R5tqwD',100%,100%)
                     @extend %img_filter
@@ -23,11 +24,13 @@ section
                     +bg-color-center($spec_color)
                 &-word
                     +word-center($target_color)
-            .group_top
+            .group-top
                 width: 260px
                 height: 260px
                 cursor: pointer
                 position: relative
+                overflow: hidden
+                border-right: 1px solid $primary_color
                 &-img
                     +bg-url('https://bit.ly/2Dwoxd7',100%,100%)
                     @extend %img_filter
@@ -35,11 +38,12 @@ section
                     +bg-color-center($target_color)
                 &-word
                     +word-center($primary_color)
-            .group_new
+            .group-new
                 width: 260px
                 height: 260px
                 cursor: pointer
                 position: relative
+                overflow: hidden
                 &-img
                     +bg-url('https://bit.ly/2OUteif',100%,100%)
                     @extend %img_filter
@@ -47,4 +51,90 @@ section
                     +bg-color-center($target_color)
                 &-word
                     +word-center($primary_color)
+.story
+    background-color: $second_color
+    height: 420px
+    margin-bottom: 75px
+    .section__story
+        display: flex
+        justify-content: space-between
+        width: $desktop_width
+        &--title
+            +bg('lg-why-choice.svg',90px,310px)
+            order: 3
+            transform: translateY(-7%)
+        &--content
+            @extend %story_text
+            order: 2
+            p
+                margin-bottom: 20px
+                margin-left: 20px
+                color: $font_color
+        &--img
+            +bg-url('https://bit.ly/2xPn7Eq',460px,460px)
+            order: 1
+            transform: translateY(-5%)
+        .opposite-title
+            +bg('lg-why-eat.svg',90px,310px)
+            order: 2
+        .opposite-content
+            order: 1
+        .opposite-img
+            +bg-url('https://bit.ly/2zzAQS4',460px,460px)
+            order: 3
 
+.svg__center
+    +bg('lg-want-eat.svg',90px,330px)
+
+.card__container
+    width: $desktop_width
+    display: flex
+    justify-content: space-between  
+    &--product
+        width: 300px
+        max-height: 440px
+        .product-img
+            +bg-url('https://bit.ly/2zBjQuq',100%,315px)
+            position: relative
+            .product-today-featured
+                background-color: $target_color
+                color: $primary_color
+                padding: 10px
+                text-align: center
+                letter-spacing: 3px
+                -webkit-writing-mode: vertical-lr
+                writing-mode: vertical-lr
+                position: absolute
+                left: 5%
+                top: 0
+            i
+                position: absolute
+                color: $target_color
+                top: 5%
+                right: 5%
+                font-size: 20px
+                cursor: pointer
+        .product-info
+            display: flex
+            text-align: center
+            border: 1px $second_color solid
+            font-size: 20px
+            &-name
+                padding: 14px
+                flex-grow: 1
+                border-right: 1px solid $second_color 
+                color: $target_color
+            &-price 
+                padding: 14px
+                font-weight: bold
+                color: $target_color
+        button
+            width: 100%
+            background-color: $second_color
+            color: $target_color
+            font-size: 24px
+            text-align: center
+            padding: 16px
+            border: none
+            font-weight: bold
+                

@@ -24,6 +24,27 @@ header
             a
                 color: $target_color
                 font-weight: bold
+footer
+    max-height: 460px
+    // flex-direction: column
+    margin-top: 60px
+    .footer__subscription   
+        width: 100%    
+        background-color: $target_color
+        display: flex
+        justify-content: center
+        &--container
+            width: $desktop_width
+            .logo-group
+                display: flex
+                align-items: center
+                width: 280px
+                .group-img
+                    +bg('logo-light.svg',40px,40px)
+                .group-title
+                    text-align: center
+    .footer__info
+
 
 
     
