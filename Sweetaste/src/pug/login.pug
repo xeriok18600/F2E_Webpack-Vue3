@@ -7,7 +7,7 @@ html(lang="en")
         link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
         link(rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css")
         link(rel="stylesheet",type="text/css" href="/dist/style.css")
-        title Product
+        title Login
     body
         #app
             header.header
@@ -23,58 +23,34 @@ html(lang="en")
                         li      
                             a(href="/dist/cart.html")
                                 i.fas.fa-shopping-cart  
-            section
-                .section-container
-                    .section-container-product__background
-                        .want-eat-img
-            .product
-                .product__container
-                    .product__container--filter
-                        .filter-title 甜點類別
-                        ul.filter-item
-                            li.now-select 所有甜點 (48)
-                            li 本日精選 (10)
-                            li 人氣推薦 (26)
-                            li 新品上市 (12)
-                    .product__container--list
-                        ul.card-container
-                            li.card-container__product
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                            li.card-container__product
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                            li.card-container__product
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                        ul.pagination
+            .login
+                .login-container
+                    .login-container__memberlogin
+                        .login-container__memberlogin-group
+                            .login-container__memberlogin-group-title 會員登入
+                            .login-container__memberlogin-group-input
+                                .login-container__memberlogin-group-input-account
+                                    i.relative-icon.fas.fa-user 
+                                    input(type="text",placeholder="電子信箱/手機號碼")
+                                .login-container__memberlogin-group-input-password
+                                    i.relative-icon.fas.fa-key
+                                    input(type="password", name="", placeHolder="請輸入使用者密碼")
+                            .login-container__memberlogin-group-box
+                                input#box-save(type="checkbox", name="")
+                                label(for="box-save") 記住我
+                        button 登入帳號
+                    .login-container__social
+                        .login-container__social-title —— 連結社群帳號 ——
+                        ul.login-container__social-group
                             li
-                                a(href="")
-                                    i.fas.fa-arrow-left
-                            li.select
-                                a(href="") 1
+                                button
+                                    img(src="/dist/img/ic-facebook-logotype.svg", alt="", width="100", hright="20") 
                             li
-                                a(href="") 2
+                                button
+                                    img(src="/dist/img/ic-google.svg", alt="",width="100", hright="20") 
                             li
-                                a(href="") 3
-                            li
-                                a(href="")
-                                    i.fas.fa-arrow-right       
+                                button
+                                    img(src="/dist/img/ic-yahoo.svg", alt="",width="100", hright="20") 
             footer.footer
                 .footer-subscription
                     .footer-subscription__container

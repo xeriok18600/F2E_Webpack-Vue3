@@ -6,17 +6,17 @@ html,body
     max-width: 100%
     width: 100vw
 
-header
+.header
     margin-top: 30px
     display: flex
     justify-content: center
-    .header__container
+    &-container
         width: $desktop_width
         display: flex
         justify-content: space-between
-        &--logo
+        &__logo
             +bg('logo-all-dark.svg',300px,55px)
-        &--navbar
+        &__navbar
             width: 370px
             display: flex
             align-self: center
@@ -24,40 +24,34 @@ header
             a
                 color: $target_color
                 font-weight: bold
-footer
+.footer
     max-height: 460px
     margin-top: 60px
-    .footer__subscription       
+    .footer-subscription       
         background-color: $target_color
-        padding: 40px
-        &--container
+        padding-top: 30px
+        height: 116px
+        &__container
             margin: 0 auto
             display: flex
             justify-content: space-between
             max-width: 900px
-            .logo-group
+            .footer__container-group
                 display: flex
                 align-items: center
                 width: 280px
-                .group-img
+                &-img
                     +bg('logo-light.svg',40px,40px)
                     margin-right: 20px
-                .group-title
+                &-title
                     text-align: center
                     font-size: 24px
                     color: $second_color
-            .send-mail
+            .footer__container-mail
                 width: 380px
                 height: 60px
                 display: flex
-                position: relative
-                .mail-icon
-                    font-size: 24px
-                    color: $target_color
-                    position: absolute
-                    left: 20px
-                    top: 50%
-                    transform: translateY(-50%)          
+                position: relative   
                 input
                     width: calc(100% - 64px - 45px)
                     padding-left: 45px
@@ -66,43 +60,53 @@ footer
                     width: calc(100% - 320px)
                     background-color: $spec_color
                     border: none
-    .footer__info
+    .footer-info
         background-color: $second_color
         padding: 40px
-        &--container
+        &__container
             margin: 0 auto
             max-width: 900px
-            .total-info
+            .footer__container-info
                 width: 100%
                 display: flex
                 justify-content: space-between
-                .company-info
-                    .info-title
+                .footer__info-company
+                    &-title
                         +bg('logotype-lg-dark.svg',170px,27px)
-                    .info-address
+                    &-address
                         margin-top: 115px
                         li
                             color: $target_color
                             padding-bottom: 5px
-                .info-img
+                .footer__info-img
                     +bg('sm-today-good-eat.svg',60px,220px)
-            .social-info
+            .footer__container-social
                 display: flex
                 width: 100%
                 margin-top: 30px
                 justify-content: space-between
-                .social-icon
+                .footer__social-icon
                     display: flex
-                    .icon-fb
+                    &-fb
                         margin-right: 8px
                         +bg('ic-facebook.svg',32px,32px)
-                    .icon-line
+                    &-line
                         +bg('ic-line@.svg',32px,32px)
-                .social-remark
+                .footer__social-remark
                     align-self: center
                     color: $target_color
-
-
+.mg-20
+    margin-left: 20px
+    margin-right: 20px
+.mg-b-20
+    margin-bottom: 20px
+.relative-icon
+    font-size: 24px
+    color: $target_color
+    position: absolute
+    left: 20px
+    top: 50%
+    transform: translateY(-50%)       
 
 
 

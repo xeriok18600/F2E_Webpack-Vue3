@@ -1,0 +1,33 @@
+.mycart
+    @extend %container
+    &-container
+        width: $desktop_width
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &__list
+            text-align: center
+            &-title
+                font-size: 24px
+                font-weight: bold
+                color: $target_color
+                background-color: $second_color    
+                padding: 16px 250px      
+            &-item
+                margin-top: 33px
+                &-img
+                    +bg-url('https://bit.ly/2QvsT63',110px,110px)
+                &-name
+                &-box
+                &-price
+                li
+                    height: 130px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+        &__order
+            &-title
+                text-align: center
+                font-size: 24px
+                font-weight: bold
+                padding: 16px 106px

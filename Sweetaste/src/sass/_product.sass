@@ -1,0 +1,51 @@
+.section-container-product__background
+    +bg-url('https://bit.ly/2Qodh3Z',100%,500px)
+    display: flex
+    justify-content: flex-end
+    .want-eat-img
+        +bg('lg-want-eat.svg',90px,330px) 
+        margin-right: 40px
+        margin-top: 40px
+.product
+    @extend %container
+    &__container 
+        max-width: $desktop_width
+        display: flex
+        justify-content: space-between
+        &--filter
+            width: 30%
+            text-align: center
+            font-size: 24px
+            cursor: pointer
+            font-weight: bold
+            .filter-title
+                padding: 20px
+                color: $second_color
+                background-color: $target_color
+            .filter-item
+                color: $target_color
+                li
+                    padding: 20px
+                    border: 1px $second_color solid
+                .now-select
+                    background-color: $second_color
+        &--list
+            width: 65%
+        .pagination
+            display: flex
+            justify-content: flex-end
+            li
+                font-size: 20px
+                display: flex
+                align-items:  center
+                justify-content: center
+                border: solid 1px $second_color
+                a
+                    color: $target_color
+                    padding: 16px 26px
+            .select
+                background-color: $target_color
+                a
+                    color: $primary_color
+
+                

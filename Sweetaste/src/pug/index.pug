@@ -10,103 +10,103 @@ html(lang="en")
         title Sweetaste
     body
         #app
-            header
-                .header__container
-                    .header__container--logo
-                    ul.header__container--navbar
+            header.header
+                .header-container
+                    .header-container__logo
+                    ul.header-container__navbar
                         li  
                             a(href="/dist/index.html") 首頁
                         li
                             a(href="/dist/product.html") 甜點
                         li
-                            a(href="") 登入
+                            a(href="/dist/login.html") 登入
                         li      
-                            a(href="")
+                            a(href="/dist/cart.html")
                                 i.fas.fa-shopping-cart  
-            section
-                .section__container
-                    .section__container--background
-                    ul.section__container--group
-                        li.group-today
-                            .group-today-img
-                            .group-today-bg
-                            .group-today-word 本日精選
-                        li.group-top
-                            .group-top-img
-                            .group-top-bg
-                            .group-top-word 人氣推薦
-                        li.group-new
-                            .group-new-img
-                            .group-new-bg
-                            .group-new-word 新品上市
+            section.section
+                .section-container
+                    .section-container__background
+                    ul.section-container__group
+                        li.section__group--yellow
+                            .section__group-img
+                            .section__group-bg
+                            .section__group-word 本日精選
+                        li.section__group-top
+                            .section__group-img
+                            .section__group-bg
+                            .section__group-word 人氣推薦
+                        li.section__group-new
+                            .section__group-img
+                            .section__group-bg
+                            .section__group-word 新品上市
             section.story
-                .section__story
-                    .section__story--title
-                    .section__story--content
+                .story-container
+                    .story-container__title
+                    .story-container__content
                         p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                         p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
-                    .section__story--img
+                    .story-container__img
             section.story
-                .section__story
-                    .section__story--title.opposite-title
-                    .section__story--content.opposite-content
+                .story-container
+                    .story-container__title.opposite-title
+                    .story-container__content.opposite-content
                         p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                         p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
-                    .section__story--img.opposite-img
+                    .story-container__img.opposite-img
             section
                 .svg__center
-            section
-                ul.card__container
-                    li.card__container--product
-                        .product-img
-                            .product-today-featured 本日精選
+            section.card
+                ul.card-container
+                    li.card-container__product
+                        .card__product-img
+                            .card__product-featured 本日精選
                             i.far.fa-heart
-                        .product-info
-                            .product-info-name 焦糖馬卡龍
-                            .product-info-price NT$ 450
+                        .card__product-info
+                            .card__info-name 焦糖馬卡龍
+                            .card__info-price NT$ 450
                         button 加入購物車
-                    li.card__container--product
-                        .product-img
-                            .product-today-featured 本日精選
+                    li.card-container__product.mg-20
+                        .card__product-img
+                            .card__product-featured 本日精選
                             i.far.fa-heart
-                        .product-info
-                            .product-info-name 焦糖馬卡龍
-                            .product-info-price NT$ 450
+                        .card__product-info
+                            .card__info-name 焦糖馬卡龍
+                            .card__info-price NT$ 450
                         button 加入購物車
-                    li.card__container--product
-                        .product-img
-                            .product-today-featured 本日精選
+                    li.card-container__product
+                        .card__product-img
+                            .card__product-featured 本日精選
                             i.far.fa-heart
-                        .product-info
-                            .product-info-name 焦糖馬卡龍
-                            .product-info-price NT$ 450
+                        .card__product-info
+                            .card__info-name 焦糖馬卡龍
+                            .card__info-price NT$ 450
                         button 加入購物車
-            footer
-                .footer__subscription
-                    .footer__subscription--container
-                        .logo-group
-                            .group-img
-                            .group-title 訂閱你我的甜蜜郵件
-                        .send-mail
-                            i.mail-icon.fas.fa-envelope
+            footer.footer
+                .footer-subscription
+                    .footer-subscription__container
+                        .footer__container-group
+                            .footer__container-group-img
+                            .footer__container-group-title 訂閱你我的甜蜜郵件
+                        .footer__container-mail
+                            i.relative-icon.fas.fa-envelope
                             input(type="text", name="")
                             button
                                 i.fas.fa-arrow-right                  
-                .footer__info
-                    .footer__info--container
-                        .total-info
-                            .company-info
-                                .info-title
-                                ul.info-address
+                .footer-info
+                    .footer-info__container
+                        .footer__container-info
+                            .footer__info-company
+                                .footer__info-company-title
+                                ul.footer__info-company-address
                                     li 07-1234-5678
                                     li sweetaste@email.com
                                     li 800 高雄市新興區幸福路 520 號
-                            .info-img
-                        .social-info
-                            .social-icon
-                                .icon-fb
-                                .icon-line
-                            .social-remark © 2018 Sweetaste* All Rights Reserved
+                            .footer__info-img
+                        .footer__container-social
+                            .footer__social-icon
+                                .footer__social-icon-fb
+                                .footer__social-icon-line
+                            .footer__social-remark © 2018 Sweetaste* All Rights Reserved
 
         script(src="https://cdn.jsdelivr.net/npm/vue")
         //- script(src="https://unpkg.com/element-ui/lib/index.js")

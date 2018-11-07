@@ -1,76 +1,74 @@
 section
-    margin-top: 30px
-    display: flex
-    justify-content: center
-    .section__container
+    @extend %container
+    .section-container
         width: $desktop_width
-        &--background
+        &__background
             +bg-url('https://bit.ly/2OhbMHr',100%,500px)
-        &--group
+        &__group
             display: flex
             justify-content: center
             transform: translateY(-30%)
-            .group-today
+            .section__group--yellow
                 width: 260px
                 height: 260px
                 cursor: pointer
                 position: relative
                 overflow: hidden
                 border-right: 1px solid $primary_color 
-                &-img
+                .section__group-img
                     +bg-url('https://bit.ly/2R5tqwD',100%,100%)
                     @extend %img_filter
-                &-bg
+                .section__group-bg
                     +bg-color-center($spec_color)
-                &-word
+                .section__group-word
                     +word-center($target_color)
-            .group-top
+            .section__group-top
                 width: 260px
                 height: 260px
                 cursor: pointer
                 position: relative
                 overflow: hidden
                 border-right: 1px solid $primary_color
-                &-img
+                .section__group-img
                     +bg-url('https://bit.ly/2Dwoxd7',100%,100%)
                     @extend %img_filter
-                &-bg
+                .section__group-bg
                     +bg-color-center($target_color)
-                &-word
+                .section__group-word
                     +word-center($primary_color)
-            .group-new
+            .section__group-new
                 width: 260px
                 height: 260px
                 cursor: pointer
                 position: relative
                 overflow: hidden
-                &-img
+                .section__group-img
                     +bg-url('https://bit.ly/2OUteif',100%,100%)
                     @extend %img_filter
-                &-bg
+                .section__group-bg
                     +bg-color-center($target_color)
-                &-word
+                .section__group-word
                     +word-center($primary_color)
 .story
     background-color: $second_color
     height: 420px
     margin-bottom: 75px
-    .section__story
+    &-container
         display: flex
         justify-content: space-between
         width: $desktop_width
-        &--title
+        &__title
             +bg('lg-why-choice.svg',90px,310px)
             order: 3
             transform: translateY(-7%)
-        &--content
+        &__content
             @extend %story_text
             order: 2
             p
                 margin-bottom: 20px
                 margin-left: 20px
                 color: $font_color
-        &--img
+        &__img
             +bg-url('https://bit.ly/2xPn7Eq',460px,460px)
             order: 1
             transform: translateY(-5%)
@@ -82,21 +80,22 @@ section
         .opposite-img
             +bg-url('https://bit.ly/2zzAQS4',460px,460px)
             order: 3
-
+            
 .svg__center
     +bg('lg-want-eat.svg',90px,330px)
 
-.card__container
-    width: $desktop_width
+.card-container
+    max-width: $desktop_width
     display: flex
     justify-content: space-between  
-    &--product
+    flex-wrap: wrap
+    &__product
         width: 300px
         max-height: 440px
-        .product-img
+        .card__product-img
             +bg-url('https://bit.ly/2zBjQuq',100%,315px)
             position: relative
-            .product-today-featured
+            .card__product-featured
                 background-color: $target_color
                 color: $primary_color
                 padding: 10px
@@ -114,17 +113,17 @@ section
                 right: 5%
                 font-size: 20px
                 cursor: pointer
-        .product-info
+        .card__product-info
             display: flex
             text-align: center
             border: 1px $second_color solid
             font-size: 20px
-            &-name
+            .card__info-name 
                 padding: 14px
                 flex-grow: 1
                 border-right: 1px solid $second_color 
                 color: $target_color
-            &-price 
+            .card__info-price
                 padding: 14px
                 font-weight: bold
                 color: $target_color
