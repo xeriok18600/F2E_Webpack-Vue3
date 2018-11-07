@@ -7,7 +7,7 @@ html(lang="en")
         link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
         link(rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css")
         link(rel="stylesheet",type="text/css" href="/dist/style.css")
-        title Product
+        title Cart
     body
         #app
             header.header
@@ -23,58 +23,8 @@ html(lang="en")
                         li      
                             a(href="/dist/cart.html")
                                 i.fas.fa-shopping-cart  
-            section
-                .section-container
-                    .section-container-product__background
-                        .want-eat-img
-            .product
-                .product__container
-                    .product__container--filter
-                        .filter-title 甜點類別
-                        ul.filter-item
-                            li.now-select 所有甜點 (48)
-                            li 本日精選 (10)
-                            li 人氣推薦 (26)
-                            li 新品上市 (12)
-                    .product__container--list
-                        ul.card-container
-                            li.card-container__product.mg-b-20
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                            li.card-container__product.mg-b-20
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                            li.card-container__product.mg-b-20
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                        ul.pagination
-                            li
-                                a(href="")
-                                    i.fas.fa-arrow-left
-                            li.select
-                                a(href="") 1
-                            li
-                                a(href="") 2
-                            li
-                                a(href="") 3
-                            li
-                                a(href="")
-                                    i.fas.fa-arrow-right       
+            .checkout
+                .checkout-container
             footer.footer
                 .footer-subscription
                     .footer-subscription__container

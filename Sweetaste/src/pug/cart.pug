@@ -28,19 +28,57 @@ html(lang="en")
                     .mycart-container__list
                         .mycart-container__list-title 您的購物車
                         ul.mycart-container__list-item
-                            li
+                            li.border-b
                                 .mycart-container__list-item-img
                                 .mycart-container__list-item-name
                                     p 焦糖馬卡龍
                                     p NT$ 450
-                                .mycart-container__list-item-box
-                                .mycart-container__list-item-price NT$ 450
-                                //- i.far.fa-trash-alt
-                            li
-                            li
+                                ul.mycart-container__list-item-box
+                                    li -
+                                    li
+                                        input(type="text",value="2")
+                                    li +
+                                .mycart-container__list-item-price NT$ 900
+                                i.far.fa-trash-alt
+                            li.border-b
+                                .mycart-container__list-item-img
+                                .mycart-container__list-item-name
+                                    p 焦糖馬卡龍
+                                    p NT$ 450
+                                ul.mycart-container__list-item-box
+                                    li -
+                                    li
+                                        input(type="text",value="2")
+                                    li +
+                                .mycart-container__list-item-price NT$ 900
+                                i.far.fa-trash-alt
+                            li.border-b
+                                .mycart-container__list-item-img
+                                .mycart-container__list-item-name
+                                    p 焦糖馬卡龍
+                                    p NT$ 450
+                                ul.mycart-container__list-item-box
+                                    li -
+                                    li
+                                        input(type="text",value="2")
+                                    li +
+                                .mycart-container__list-item-price NT$ 900
+                                i.far.fa-trash-alt
                     .mycart-container__order
-                        .mycart-container__order-title 訂單摘要
-
+                        .mycart-container__order-summary
+                            .mycart-container__order-summary-title 訂單摘要
+                            .mycart-container__order-summary-detail
+                                .flex-between.p-b-8
+                                    span 小計
+                                    span NT$ 2,700
+                                .flex-between.p-b-16
+                                    span 運費
+                                    span NT$ 300
+                                .flex-between.p-b-16.f-20
+                                    span 總計
+                                    span NT$ 3,000
+                        button.btn 
+                            a(href="/dist/checkout.html") 結帳
             footer.footer
                 .footer-subscription
                     .footer-subscription__container
