@@ -6,8 +6,9 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
         link(rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         link(rel="stylesheet",type="text/css" href="/dist/style.css")
-        title Cart
+        title Checkout
     body
         #app
             header.header
@@ -24,7 +25,101 @@ html(lang="en")
                             a(href="/dist/cart.html")
                                 i.fas.fa-shopping-cart  
             .checkout
-                .checkout-container
+                .checkout-container.flex-between
+                    .checkout-container__group
+                        .checkout-container__group-shipinfo.display-none
+                            .checkout-container__group-shipinfo-title.flex-between.mg-b-16
+                                span 運送
+                                ul.progressbar.flex-between
+                                    li 
+                                        i.far.fa-dot-circle.color-primary                                    
+                                    li
+                                        i.far.fa-circle
+                                    li
+                                        i.far.fa-circle
+                            .checkout-container__group-shipinfo-buyer.flex-between.mg-b-16
+                                .firstname
+                                    span.f-20.color-second.m-b-8.block 姓氏
+                                    input.input(type="text", name="", placeholder="王")
+                                .lastname
+                                    span.f-20.color-second.m-b-8.block 名字
+                                    input.input(type="text", name="", placeholder="小明")
+                            .checkout-container__group-shipinfo-tel.mg-b-16
+                                span.f-20.color-second.m-b-8.block 電話
+                                input.input(type="tel", name="", placeholder="0912-345-678")
+                            .checkout-container__group-shipinfo-address
+                                .country.flex-between.m-b-8
+                                    span.f-20.color-second.m-b-8.block 地址
+                                    select.select(name="")
+                                        option(value="") 高雄市
+                                    select.select(name="")
+                                        option(value="") 新興區
+                                .load
+                                    input.input(type="text", name="", placeholder="幸福路")
+                        .checkout-container__group-payinfo
+                            .checkout-container__group-payinfo-title.flex-between.mg-b-16
+                                span 付款
+                                ul.progressbar.flex-between
+                                    li 
+                                        i.fas.fa-check-circle.color-primary                                    
+                                    li
+                                        i.far.fa-dot-circle.color-primary  
+                                    li
+                                        i.far.fa-circle
+                            .checkout-container__group-payinfo-cardnum.mg-b-16
+                                span.f-20.color-second.m-b-8.block 信用卡卡號
+                                .number
+                                    input.input(type="text", name="", placeholder="9012-3456-7890-1234")
+                                    i.material-icons credit_card
+                            .checkout-container__group-payinfo-cardname.mg-b-16.flex-between
+                                span.f-20.color-second.m-b-8.block 持卡人姓名
+                                input.input(type="text", name="", placeholder="王")
+                                input.input(type="text", name="", placeholder="小明")
+                            .checkout-container__group-payinfo-deadline.mg-b-16.flex-between
+                                span.f-20.color-second.m-b-8.bloc 有效期限
+                                select.select(name="")
+                                    option(value="") 月
+                                select.select(name="")
+                                    option(value="") 年
+                            .checkout-container__group-payinfo-safenum.flex-between.p-b-30
+                                span.f-20.color-second.m-b-8.block 持卡人姓名
+                                input.input(type="password", name="", placeholder="背面末三碼")
+                        .checkout-container__group-invoice
+                            
+                        button.btn 
+                            a.btn-a(href="") 下一步
+                    .checkout-container__orderinfo
+                        .checkout-container__orderinfo-summary.mg-b-20
+                            .checkout-container__orderinfo-summary-title 訂單摘要
+                            .checkout-container__orderinfo-summary-detail
+                                .flex-between.p-b-8.color-font
+                                    span 小計
+                                    span NT$ 2,700
+                                .flex-between.p-b-16.color-font
+                                    span 運費
+                                    span NT$ 300
+                                .flex-between.p-b-16.f-20.color-font.f-bold
+                                    span 總計
+                                    span NT$ 3,000
+                        .checkout-container__orderinfo-list
+                            .checkout-container__orderinfo-list-title 購物清單
+                            .checkout-container__orderinfo-list-detail
+                                ul.detail-list
+                                    li.flex-between.p-b-16
+                                        .detail-list-img
+                                        .detail-list-name
+                                            p.color-font.p-b-8 焦糖馬卡龍 (2)
+                                            p.color-font.f-20 NT$ 900
+                                    li.flex-between.p-b-16
+                                        .detail-list-img
+                                        .detail-list-name
+                                            p.color-font.p-b-8 焦糖馬卡龍 (2)
+                                            p.color-font.f-20 NT$ 900
+                                    li.flex-between.p-b-16
+                                        .detail-list-img
+                                        .detail-list-name
+                                            p.color-font.p-b-8 焦糖馬卡龍 (2)
+                                            p.color-font.f-20 NT$ 900
             footer.footer
                 .footer-subscription
                     .footer-subscription__container

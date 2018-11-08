@@ -1,0 +1,93 @@
+.checkout
+    @extend %container
+    &-container
+        width: 780px
+        &__group
+            width: 59%
+            &-shipinfo,&-payinfo
+                padding: 30px 40px
+                padding-bottom: 0
+                background-color: $target_color
+                &-title
+                    width: 380px
+                    span
+                        font-size: 36px
+                        color: $second_color
+                    .progressbar
+                        width: 50%
+                        align-items: center
+                        position: relative
+                        &:after
+                            position: absolute
+                            content: ''
+                            background-color: $font_color
+                            height: 1px
+                            top: 50%
+                            left: 0
+                            right: 0
+                        li  
+                            z-index: 1
+                            background-color: $target_color
+                            i
+                                color: $font_color
+                &-buyer
+                    width: 100%
+                    .firstname,.lastname
+                        width: calc(100% / 2 - 4px)
+                &-tel
+                    max-width: 380px
+                &-address
+                    max-width: 380px
+                    .country,.load
+                        width: 380px
+                    .country
+                        span
+                            width: 100%
+                    .load
+                        padding-bottom: 30px
+            &-payinfo
+                @extend %checkout
+                &-cardnum
+                    .number
+                        position: relative
+                        i
+                            position: absolute
+                            top: 25%
+                            right: 22px
+                            color: $target_color
+                &-cardname,&-safenum
+                    input
+                        width: calc(100% / 2 - 4px)
+        &__orderinfo
+            width: 38%
+            &-summary
+                border: solid 1px $second_color
+                &-title
+                    text-align: center
+                    font-size: 24px
+                    font-weight: bold
+                    padding: 20px
+                    background-color: $second_color
+                    color: $font_color  
+                &-detail
+                    padding: 16px 20px   
+                    padding-bottom: 0     
+            &-list
+                border: solid 1px $second_color
+                &-title
+                    text-align: center
+                    font-size: 24px
+                    font-weight: bold
+                    padding: 20px
+                    background-color: $second_color
+                    color: $font_color
+                &-detail
+                    padding: 16px 20px   
+                    padding-bottom: 0   
+                    .detail-list
+                        &-img
+                            +bg-url('https://bit.ly/2QvsT63',120px,80px)
+                        &-name
+                            align-self: center
+
+                        
