@@ -4,10 +4,8 @@
         width: 780px
         &__group
             width: 59%
-            &-shipinfo,&-payinfo
-                padding: 30px 40px
-                padding-bottom: 0
-                background-color: $target_color
+            &-shipinfo,&-payinfo,&-invoice
+                @extend %checkout
                 &-title
                     width: 380px
                     span
@@ -58,6 +56,10 @@
                 &-cardname,&-safenum
                     input
                         width: calc(100% / 2 - 4px)
+            &-invoice
+                @extend %checkout 
+                &-type
+                    border: 1px solid $second_color
         &__orderinfo
             width: 38%
             &-summary
