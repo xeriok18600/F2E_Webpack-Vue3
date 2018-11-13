@@ -69,6 +69,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pug/checkout.pug',
             filename: 'checkout.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pug/final.pug',
+            filename: 'final.html'
         })
     ]
 };

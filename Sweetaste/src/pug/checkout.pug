@@ -95,13 +95,18 @@ html(lang="en")
                                     li
                                         i.far.fa-dot-circle.color-primary  
                             .checkout-container__group-invoice-type.flex-between.mg-b-16
-                                button.btn-selected 電子發票
-                                button.btn 郵寄發票
+                                button.btn-selected.f-bold 電子發票
+                                button.btn.f-bold 郵寄發票
                             .checkout-container__group-invoice-mail.flex-between.mg-b-16
-                                
-
-                        button.btn-next
+                                span.f-20.color-second.m-b-8.block 電子郵件信箱
+                                input.input(type="email", name="", placeholder="example@email.com")
+                            .checkout-container__group-invoice-uniformnum.flex-between.p-b-30
+                                span.f-20.color-second.m-b-8.block 統一編號（選填）
+                                input.input(type="text", name="", placeholder="12345678")
+                        button.btn-next.display-none
                             a.btn-a(href="") 下一步
+                        button.btn-next
+                            a.btn-a(href="/dist/final.html") 確認結帳
                     .checkout-container__orderinfo
                         .checkout-container__orderinfo-summary.mg-b-20
                             .checkout-container__orderinfo-summary-title 訂單摘要
