@@ -1,13 +1,16 @@
 section
     @extend %container
+    max-width: $desktop_width
+    margin: 0 auto
     .section-container
-        width: $desktop_width
+        width: 100%
+        justify-content: center
         &__background
             +bg-url('https://bit.ly/2OhbMHr',100%,500px)
         &__group
             display: flex
-            justify-content: center
             transform: translateY(-30%)
+            width: 100%
             .section__group--yellow
                 width: 260px
                 height: 260px

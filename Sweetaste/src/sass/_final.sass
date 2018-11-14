@@ -3,5 +3,32 @@
         width: $desktop_width
         &__background
             +bg-url('https://bit.ly/2P7GhNd',100%,460px)
+            position: relative
             &-group
                 width: 300px
+                justify-content: center
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%,-50%)
+                .progressbar
+                    width: 63.3%
+                    align-items: center
+                    position: relative
+                    margin-bottom: 30px
+                    &:after
+                        position: absolute
+                        content: ''
+                        background-color: $font_color
+                        height: 1px
+                        top: 50%
+                        left: 0
+                        right: 0
+                    li  
+                        z-index: 1
+                        background-color: transparent
+                        i
+                            color: $target_color
+                .pay-success
+                    +bg('lg-pay.svg',190px,46px) 
+                    margin-bottom: 50px

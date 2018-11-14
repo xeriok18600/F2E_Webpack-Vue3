@@ -23,7 +23,6 @@
   filter: blur(4px)
   
 %container
-  margin-top: 30px
   display: flex
   justify-content: center
 
@@ -54,18 +53,22 @@
 .f-20
   font-size: 20px
   width: 100%
-.color-second
-  color: $second_color
-.color-font
-  color: $font_color
-.color-primary
-  color: $primary_color !important
 .f-bold
   font-weight: bold
 .w-100
   width: 100%
 //////
 
+/// color ///
+.color-target
+  color: $target_color
+.color-second
+  color: $second_color
+.color-font
+  color: $font_color
+.color-primary
+  color: $primary_color !important
+  
 .block
   display: block
 .relative-icon
@@ -132,4 +135,6 @@
   color: $font_color
   background-color: $second_color 
 .display-none
-  display: none
+  display: none !important
+
+  

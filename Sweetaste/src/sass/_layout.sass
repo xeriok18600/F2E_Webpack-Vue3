@@ -7,23 +7,26 @@ html,body
     width: 100vw
 
 .header
-    margin-top: 30px
-    display: flex
-    justify-content: center
+    max-width: 940px
+    margin: 0 auto
     &-container
-        width: $desktop_width
         display: flex
         justify-content: space-between
         &__logo
-            +bg('logo-all-dark.svg',300px,55px)
-        &__navbar
-            width: 370px
+            +bg('logo-all-dark.svg',219px,100px)
+        &__navbar         
             display: flex
             align-self: center
             justify-content: space-between
             a
-                color: $target_color
-                font-weight: bold
+                padding-left: 48px
+                padding-right: 48px
+        a
+            color: $target_color
+            font-weight: bold
+            align-self: center
+            display: block
+
 .footer
     max-height: 460px
     margin-top: 60px

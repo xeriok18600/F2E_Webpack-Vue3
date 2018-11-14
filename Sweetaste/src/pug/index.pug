@@ -12,19 +12,21 @@ html(lang="en")
         #app
             header.header
                 .header-container
+                    ul.display-none.d-mb-block.mb-header.header-container__navbar
+                        li
+                            i.fas.fa-bars.color-target 
                     .header-container__logo
-                    ul.header-container__navbar
+                    ul.header-container__navbar.d-md-none
                         li  
                             a(href="/dist/index.html") 首頁
                         li
                             a(href="/dist/product.html") 甜點
                         li
-                            a(href="/dist/login.html") 登入
-                        li      
-                            a(href="/dist/cart.html")
-                                i.fas.fa-shopping-cart  
+                            a(href="/dist/login.html") 登入      
+                    a(href="/dist/cart.html")
+                        i.fas.fa-shopping-cart  
             section.section
-                .section-container
+                .section-container.flex-between
                     .section-container__background
                     ul.section-container__group
                         li.section__group--yellow
