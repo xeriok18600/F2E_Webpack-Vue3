@@ -22,10 +22,6 @@
   -ms-filter: blur(4px)    
   filter: blur(4px)
   
-%container
-  display: flex
-  justify-content: center
-
 %checkout
   padding: 30px 40px
   padding-bottom: 0
@@ -47,6 +43,10 @@
   margin-bottom: 16px
 .mg-b-20
   margin-bottom: 20px
+.mg-b-30
+  margin-bottom: 30px
+.mg-l-auto
+  margin-left: auto
     
 /// font ///
 
@@ -57,7 +57,6 @@
   font-weight: bold
 .w-100
   width: 100%
-//////
 
 /// color ///
 .color-target
@@ -68,7 +67,8 @@
   color: $font_color
 .color-primary
   color: $primary_color !important
-  
+
+/// display /// 
 .block
   display: block
 .relative-icon
@@ -85,11 +85,14 @@
   display: flex
   justify-content: space-between
   align-items: center
-.flex-between
+.flex-justify-between
   display: flex
   justify-content: space-between
   flex-wrap: wrap
-
+.flex-justify-center
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
 /// button ///
 .btn
   height: 56px

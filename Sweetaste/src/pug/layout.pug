@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partial/_meta.pug       
+    body
+        include partial/_header.pug
+        block content
+        include partial/_footer.pug
+        script(src="https://cdn.jsdelivr.net/npm/vue")
+        script(src="/dist/app.bundle.js")

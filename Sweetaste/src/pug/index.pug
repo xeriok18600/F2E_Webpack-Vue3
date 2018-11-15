@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
-        link(rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css")
-        link(rel="stylesheet",type="text/css" href="/dist/style.css")
-        title Sweetaste
-    body
-        #app
-            header.header
-                .header-container
-                    ul.display-none.d-mb-block.mb-header.header-container__navbar
-                        li
-                            i.fas.fa-bars.color-target 
-                    .header-container__logo
-                    ul.header-container__navbar.d-md-none
-                        li  
-                            a(href="/dist/index.html") 首頁
-                        li
-                            a(href="/dist/product.html") 甜點
-                        li
-                            a(href="/dist/login.html") 登入      
-                    a(href="/dist/cart.html")
-                        i.fas.fa-shopping-cart  
-            section.section
-                .section-container.flex-between
+extends layout.pug
+block content    
+            .section
+                .section-container.flex-justify-between
                     .section-container__background
-                    ul.section-container__group
+                    ul.section-container__group.flex-justify-center
                         li.section__group--yellow
                             .section__group-img
                             .section__group-bg
@@ -41,23 +16,25 @@ html(lang="en")
                             .section__group-img
                             .section__group-bg
                             .section__group-word 新品上市
-            section.story
-                .story-container
-                    .story-container__title
+            section.mb-stroy.flex-justify-center.display-none.d-mb-block.mg-b-30
+                img(src="/dist/img/sm-horizontal-why-chioce.svg", alt="")
+            section.story.flex-justify-center
+                .story-container.flex-column
+                    .story-container__title.d-md-none
                     .story-container__content
                         p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                         p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                     .story-container__img
-            section.story
-                .story-container
-                    .story-container__title.opposite-title
+            section.story.flex-justify-center
+                .story-container.flex-column
+                    .story-container__title.opposite-title.d-md-none
                     .story-container__content.opposite-content
                         p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                         p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                     .story-container__img.opposite-img
-            section
-                .svg__center
-            section.card
+            section.flex-justify-center
+                .svg__center.d-md-none
+            section.card.flex-justify-center
                 ul.card-container
                     li.card-container__product
                         .card__product-img
@@ -83,36 +60,4 @@ html(lang="en")
                             .card__info-name 焦糖馬卡龍
                             .card__info-price NT$ 450
                         button 加入購物車
-            footer.footer
-                .footer-subscription
-                    .footer-subscription__container
-                        .footer__container-group
-                            .footer__container-group-img
-                            .footer__container-group-title 訂閱你我的甜蜜郵件
-                        .footer__container-mail
-                            i.relative-icon.fas.fa-envelope
-                            input(type="text", name="")
-                            button
-                                i.fas.fa-arrow-right                  
-                .footer-info
-                    .footer-info__container
-                        .footer__container-info
-                            .footer__info-company
-                                .footer__info-company-title
-                                ul.footer__info-company-address
-                                    li 07-1234-5678
-                                    li sweetaste@email.com
-                                    li 800 高雄市新興區幸福路 520 號
-                            .footer__info-img
-                        .footer__container-social
-                            .footer__social-icon
-                                .footer__social-icon-fb
-                                .footer__social-icon-line
-                            .footer__social-remark © 2018 Sweetaste* All Rights Reserved
-
-        script(src="https://cdn.jsdelivr.net/npm/vue")
-        //- script(src="https://unpkg.com/element-ui/lib/index.js")
-        script(src="/dist/app.bundle.js")
-            
-
-
+        
