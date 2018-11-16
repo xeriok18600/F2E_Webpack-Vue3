@@ -1,9 +1,9 @@
 extends layout.pug
 block content    
-            .section
+            .section.mg-0-auto
                 .section-container.flex-justify-between
                     .section-container__background
-                    ul.section-container__group.flex-justify-center
+                    ul.section-container__group.flex-justify-center.mg-0-auto
                         li.section__group--yellow
                             .section__group-img
                             .section__group-bg
@@ -16,7 +16,7 @@ block content
                             .section__group-img
                             .section__group-bg
                             .section__group-word 新品上市
-            section.mb-stroy.flex-justify-center.display-none.d-mb-block.mg-b-30
+            section.mb-stroy.flex-justify-center.display-none.d-mb-block.mg-b-30.mg-0-auto
                 img(src="/dist/img/sm-horizontal-why-chioce.svg", alt="")
             section.story.flex-justify-center
                 .story-container.flex-column
@@ -25,6 +25,8 @@ block content
                         p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                         p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                     .story-container__img
+            section.mb-stroy.flex-justify-center.display-none.d-mb-block.mg-b-30.mg-0-auto
+                img(src="/dist/img/sm-horizontal-why-eat.svg", alt="")
             section.story.flex-justify-center
                 .story-container.flex-column
                     .story-container__title.opposite-title.d-md-none
@@ -32,10 +34,12 @@ block content
                         p 青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                         p 是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。
                     .story-container__img.opposite-img
-            section.flex-justify-center.mg-b-80
-                .svg__center.d-md-none
+            section.flex-justify-center.mg-b-80.d-md-none
+                .svg__center
+            section.mb-stroy.flex-justify-center.display-none.d-mb-block.mg-b-30.mg-0-auto
+                img(src="/dist/img/sm-horizontal-want-eat.svg", alt="")
             section.card.flex-justify-center
-                ul.card-container
+                ul.card-container.flex-justify-between
                     li.card-container__product.d-md-none
                         .card__product-img
                             .card__product-featured 本日精選
