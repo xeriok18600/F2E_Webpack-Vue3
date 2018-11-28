@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
-        link(rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css")
-        link(rel="stylesheet",type="text/css" href="/dist/style.css")
-        title Cart
-    body
-        #app
-            header.header
-                .header-container
-                    .header-container__logo
-                    ul.header-container__navbar.d-md-none
-                        li  
-                            a(href="/dist/index.html") 首頁
-                        li
-                            a(href="/dist/product.html") 甜點
-                        li
-                            a(href="/dist/login.html") 登入      
-                    a(href="/dist/cart.html")
-                        i.fas.fa-shopping-cart  
+extends layout.pug
+block content   
             .mycart
-                .mycart-container
+                .mycart-container.mg-0-auto
                     .mycart-container__list
-                        .mycart-container__list-title 您的購物車
+                        .mycart-container__list-title.mb-prl-0 您的購物車
                         ul.mycart-container__list-item
                             li.border-b
                                 .mycart-container__list-item-img
@@ -78,33 +56,3 @@ html(lang="en")
                                     span NT$ 3,000
                         button.btn-next
                             a.btn-a(href="/dist/checkout.html") 結帳
-            footer.footer
-                .footer-subscription
-                    .footer-subscription__container
-                        .footer__container-group
-                            .footer__container-group-img
-                            .footer__container-group-title 訂閱你我的甜蜜郵件
-                        .footer__container-mail
-                            i.relative-icon.fas.fa-envelope
-                            input(type="text", name="")
-                            button
-                                i.fas.fa-arrow-right                  
-                .footer-info
-                    .footer-info__container
-                        .footer__container-info
-                            .footer__info-company
-                                .footer__info-company-title
-                                ul.footer__info-company-address
-                                    li 07-1234-5678
-                                    li sweetaste@email.com
-                                    li 800 高雄市新興區幸福路 520 號
-                            .footer__info-img
-                        .footer__container-social
-                            .footer__social-icon
-                                .footer__social-icon-fb
-                                .footer__social-icon-line
-                            .footer__social-remark © 2018 Sweetaste* All Rights Reserved
-
-        script(src="https://cdn.jsdelivr.net/npm/vue")
-        //- script(src="https://unpkg.com/element-ui/lib/index.js")
-        script(src="/dist/app.bundle.js")
