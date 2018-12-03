@@ -2,5 +2,5 @@
 
 Todolist -> Webpack 4 + Vue + Element
 
-Sweetaste -> Webpack 4 + Vue + Element + RWD + Flex + api
+Sweetaste -> Webpack 4 + Vue + RWD + Flex + api
 
