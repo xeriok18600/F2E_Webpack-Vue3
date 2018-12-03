@@ -1,42 +1,19 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
-        link(rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css")
-        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-        link(rel="stylesheet",type="text/css" href="/dist/style.css")
-        title Checkout
-    body
-        #app
-            header.header
-                .header-container
-                    .header-container__logo
-                    ul.header-container__navbar.d-md-none
-                        li  
-                            a(href="/dist/index.html") 首頁
-                        li
-                            a(href="/dist/product.html") 甜點
-                        li
-                            a(href="/dist/login.html") 登入      
-                    a(href="/dist/cart.html")
-                        i.fas.fa-shopping-cart  
+extends layout.pug
+block content   
             .checkout
-                .checkout-container.flex-between
+                .checkout-container.flex-justify-between.mg-0-auto
                     .checkout-container__group
-                        .checkout-container__group-shipinfo.display-none
-                            .checkout-container__group-shipinfo-title.flex-between.mg-b-16
+                        .checkout-container__group-shipinfo(v-if="count === 0")
+                            .checkout-container__group-shipinfo-title.flex-justify-between.mg-b-16
                                 span 運送
-                                ul.progressbar.flex-between
+                                ul.progressbar.flex-justify-between
                                     li 
                                         i.far.fa-dot-circle.color-primary                                    
                                     li
                                         i.far.fa-circle
                                     li
                                         i.far.fa-circle
-                            .checkout-container__group-shipinfo-buyer.flex-between.mg-b-16
+                            .checkout-container__group-shipinfo-buyer.flex-justify-between.mg-b-16
                                 .firstname
                                     span.f-20.color-second.m-b-8.block 姓氏
                                     input.input(type="text", name="", placeholder="王")
@@ -47,7 +24,7 @@ html(lang="en")
                                 span.f-20.color-second.m-b-8.block 電話
                                 input.input(type="tel", name="", placeholder="0912-345-678")
                             .checkout-container__group-shipinfo-address
-                                .country.flex-between.m-b-8
+                                .country.flex-justify-between.m-b-8
                                     span.f-20.color-second.m-b-8.block 地址
                                     select.select(name="")
                                         option(value="") 高雄市
@@ -55,10 +32,10 @@ html(lang="en")
                                         option(value="") 新興區
                                 .load
                                     input.input(type="text", name="", placeholder="幸福路")
-                        .checkout-container__group-payinfo.display-none
-                            .checkout-container__group-payinfo-title.flex-between.mg-b-16
+                        .checkout-container__group-payinfo(v-else-if="count === 1")
+                            .checkout-container__group-payinfo-title.flex-justify-between.mg-b-16
                                 span 付款
-                                ul.progressbar.flex-between
+                                ul.progressbar.flex-justify-between
                                     li 
                                         i.fas.fa-check-circle.color-primary                                    
                                     li
@@ -70,101 +47,70 @@ html(lang="en")
                                 .number
                                     input.input(type="text", name="", placeholder="9012-3456-7890-1234")
                                     i.material-icons credit_card
-                            .checkout-container__group-payinfo-cardname.mg-b-16.flex-between
+                            .checkout-container__group-payinfo-cardname.mg-b-16.flex-justify-between
                                 span.f-20.color-second.m-b-8.block 持卡人姓名
                                 input.input(type="text", name="", placeholder="王")
                                 input.input(type="text", name="", placeholder="小明")
-                            .checkout-container__group-payinfo-deadline.mg-b-16.flex-between
+                            .checkout-container__group-payinfo-deadline.mg-b-16.flex-justify-between
                                 span.f-20.color-second.m-b-8.bloc 有效期限
                                 select.select(name="")
                                     option(value="") 月
                                 select.select(name="")
                                     option(value="") 年
-                            .checkout-container__group-payinfo-safenum.flex-between.p-b-30
+                            .checkout-container__group-payinfo-safenum.flex-justify-between.p-b-30
                                 span.f-20.color-second.m-b-8.block 持卡人姓名
                                 input.input(type="password", name="", placeholder="背面末三碼")
-                        .checkout-container__group-invoice
-                            .checkout-container__group-invoice-title.flex-between.mg-b-16
+                        .checkout-container__group-invoice(v-else)
+                            .checkout-container__group-invoice-title.flex-justify-between.mg-b-16
                                 span 發票
-                                ul.progressbar.flex-between
+                                ul.progressbar.flex-justify-between
                                     li 
                                         i.fas.fa-check-circle.color-primary                                    
                                     li
                                         i.fas.fa-check-circle.color-primary    
                                     li
                                         i.far.fa-dot-circle.color-primary  
-                            .checkout-container__group-invoice-type.flex-between.mg-b-16
+                            .checkout-container__group-invoice-type.flex-justify-between.mg-b-16
                                 button.btn-selected.f-bold 電子發票
                                 button.btn.f-bold 郵寄發票
-                            .checkout-container__group-invoice-mail.flex-between.mg-b-16
+                            .checkout-container__group-invoice-mail.flex-justify-between.mg-b-16
                                 span.f-20.color-second.m-b-8.block 電子郵件信箱
                                 input.input(type="email", name="", placeholder="example@email.com")
-                            .checkout-container__group-invoice-uniformnum.flex-between.p-b-30
+                            .checkout-container__group-invoice-uniformnum.flex-justify-between.p-b-30
                                 span.f-20.color-second.m-b-8.block 統一編號（選填）
                                 input.input(type="text", name="", placeholder="12345678")
-                        button.btn-next.display-none
-                            a.btn-a(href="") 下一步
-                        button.btn-next
+                        button.btn-next(v-if="btnStatus" @click="nextPage") 下一步
+                        button.btn-next(v-else)
                             a.btn-a(href="/dist/final.html") 確認結帳
                     .checkout-container__orderinfo
                         .checkout-container__orderinfo-summary.mg-b-20
                             .checkout-container__orderinfo-summary-title 訂單摘要
                             .checkout-container__orderinfo-summary-detail
-                                .flex-between.p-b-8.color-font
+                                .flex-justify-between.p-b-8.color-font
                                     span 小計
                                     span NT$ 2,700
-                                .flex-between.p-b-16.color-font
+                                .flex-justify-between.p-b-16.color-font
                                     span 運費
                                     span NT$ 300
-                                .flex-between.p-b-16.f-20.color-font.f-bold
+                                .flex-justify-between.p-b-16.f-20.color-font.f-bold
                                     span 總計
                                     span NT$ 3,000
                         .checkout-container__orderinfo-list
                             .checkout-container__orderinfo-list-title 購物清單
                             .checkout-container__orderinfo-list-detail
                                 ul.detail-list
-                                    li.flex-between.p-b-16
+                                    li.flex-justify-between.p-b-16
                                         .detail-list-img
                                         .detail-list-name
                                             p.color-font.p-b-8 焦糖馬卡龍 (2)
                                             p.color-font.f-20 NT$ 900
-                                    li.flex-between.p-b-16
+                                    li.flex-justify-between.p-b-16
                                         .detail-list-img
                                         .detail-list-name
                                             p.color-font.p-b-8 焦糖馬卡龍 (2)
                                             p.color-font.f-20 NT$ 900
-                                    li.flex-between.p-b-16
+                                    li.flex-justify-between.p-b-16
                                         .detail-list-img
                                         .detail-list-name
                                             p.color-font.p-b-8 焦糖馬卡龍 (2)
                                             p.color-font.f-20 NT$ 900
-            footer.footer
-                .footer-subscription
-                    .footer-subscription__container
-                        .footer__container-group
-                            .footer__container-group-img
-                            .footer__container-group-title 訂閱你我的甜蜜郵件
-                        .footer__container-mail
-                            i.relative-icon.fas.fa-envelope
-                            input(type="text", name="")
-                            button
-                                i.fas.fa-arrow-right                  
-                .footer-info
-                    .footer-info__container
-                        .footer__container-info
-                            .footer__info-company
-                                .footer__info-company-title
-                                ul.footer__info-company-address
-                                    li 07-1234-5678
-                                    li sweetaste@email.com
-                                    li 800 高雄市新興區幸福路 520 號
-                            .footer__info-img
-                        .footer__container-social
-                            .footer__social-icon
-                                .footer__social-icon-fb
-                                .footer__social-icon-line
-                            .footer__social-remark © 2018 Sweetaste* All Rights Reserved
-
-        script(src="https://cdn.jsdelivr.net/npm/vue")
-        //- script(src="https://unpkg.com/element-ui/lib/index.js")
-        script(src="/dist/app.bundle.js")
