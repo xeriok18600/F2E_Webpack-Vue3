@@ -12,7 +12,6 @@ new Vue({
             if (this.count === 2) {
                 this.btnStatus = false
             }
-
         }
     }
 });

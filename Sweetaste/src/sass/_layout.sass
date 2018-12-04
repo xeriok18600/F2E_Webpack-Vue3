@@ -23,6 +23,8 @@ html,body
             a
                 padding-left: 48px
                 padding-right: 48px
+                &:hover
+                    color: $spec_color
         a
             color: $target_color
             font-weight: bold
@@ -54,7 +56,17 @@ html,body
                 display: flex
                 position: relative   
                 input
+                    height: 56px
+                    color: $font_color
+                    background-color: $second_color
+                    border: none
+                    padding: 17px 
+                    display: block
                     padding-left: 45px
+                    width: 0%
+                    transition: 3s
+                    &:hover
+                        width: 100%
                 button
                     width: 17% 
                     background-color: $spec_color

@@ -2,7 +2,7 @@ extends layout.pug
 block content   
             .checkout
                 .checkout-container.flex-justify-between.mg-0-auto
-                    .checkout-container__group
+                    .checkout-container__group.mb-w-100
                         .checkout-container__group-shipinfo(v-if="count === 0")
                             .checkout-container__group-shipinfo-title.flex-justify-between.mg-b-16
                                 span 運送
@@ -82,7 +82,7 @@ block content
                         button.btn-next(v-if="btnStatus" @click="nextPage") 下一步
                         button.btn-next(v-else)
                             a.btn-a(href="/dist/final.html") 確認結帳
-                    .checkout-container__orderinfo
+                    .checkout-container__orderinfo.d-md-none
                         .checkout-container__orderinfo-summary.mg-b-20
                             .checkout-container__orderinfo-summary-title 訂單摘要
                             .checkout-container__orderinfo-summary-detail

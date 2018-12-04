@@ -1,12 +1,11 @@
 .checkout
     &-container
-        width: 780px
+        max-width: 780px
         &__group
             width: 59%
             &-shipinfo,&-payinfo,&-invoice
                 @extend %checkout
                 &-title
-                    width: 380px
                     span
                         font-size: 36px
                         color: $second_color
@@ -35,11 +34,6 @@
                     max-width: 380px
                 &-address
                     max-width: 380px
-                    .country,.load
-                        width: 380px
-                    .country
-                        span
-                            width: 100%
                     .load
                         padding-bottom: 30px
             &-payinfo
