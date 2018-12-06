@@ -42,27 +42,30 @@ block content
                 ul.card-container.flex-justify-between
                     li.card-container__product.d-md-none
                         .card__product-img
+                            img.block(:src="menu[1].url", alt="")
                             .card__product-featured 本日精選
                             i.far.fa-heart
                         .card__product-info
-                            .card__info-name 焦糖馬卡龍
+                            .card__info-name {{menu[1].name}}
                             .card__info-price NT$ 450
                         button 加入購物車
                     li.card-container__product.mg-20
                         .card__product-img
+                            img.block(:src="menu[2].url", alt="")
                             .card__product-featured 本日精選
                             i.far.fa-heart
                         .card__product-info
-                            .card__info-name 焦糖馬卡龍
+                            .card__info-name {{menu[2].name}}
                             .card__info-price NT$ 450
                         button 加入購物車
                     li.card-container__product.d-md-none
                         .card__product-img
+                            img.block(:src="menu[3].url", alt="")
                             .card__product-featured 本日精選
                             i.far.fa-heart
                         .card__product-info
-                            .card__info-name 焦糖馬卡龍
+                            .card__info-name {{menu[3].name}}
                             .card__info-price NT$ 450
                         button 加入購物車
-                    //- .text {{menu}}
+                    
 

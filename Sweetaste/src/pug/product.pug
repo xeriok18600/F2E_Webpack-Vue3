@@ -9,34 +9,19 @@ block content
                     .product__container--filter.mb-w-100
                         .filter-title 甜點類別
                         ul.filter-item
-                            li.now-select 所有甜點 (48)
-                            li 本日精選 (10)
-                            li 人氣推薦 (26)
-                            li 新品上市 (12)
+                            li.now-select 所有甜點 ({{menu.length}})
+                            li 本日精選 ({{menu.slice(0,6).length}})
+                            li 人氣推薦 (0)
+                            li 新品上市 (0)
                     .product__container--list.mb-mg-0-auto
                         ul.card-container.flex-justify-between
-                            li.card-container__product.mg-b-20
+                            li.card-container__product.mg-b-20(v-for="list in menu" )
                                 .card__product-img
+                                    img.block(:src="list.url", alt="")
                                     .card__product-featured 本日精選
                                     i.far.fa-heart
                                 .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                            li.card-container__product.mg-b-20
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
-                                    .card__info-price NT$ 450
-                                button 加入購物車
-                            li.card-container__product.mg-b-20
-                                .card__product-img
-                                    .card__product-featured 本日精選
-                                    i.far.fa-heart
-                                .card__product-info
-                                    .card__info-name 焦糖馬卡龍
+                                    .card__info-name {{list.name}}
                                     .card__info-price NT$ 450
                                 button 加入購物車
                         ul.pagination.j-center
@@ -51,4 +36,5 @@ block content
                                 a(href="") 3
                             li
                                 a(href="")
-                                    i.fas.fa-arrow-right       
+                                    i.fas.fa-arrow-right
+                    //- button.btn(@click="getRandom") test

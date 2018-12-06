@@ -5,12 +5,20 @@ new Vue({
         count: 0,
         displayStatus: true,
         btnStatus: true,
-        menu: null
+        menu: [],
+        error: false
     },
-    mounted () {
+    mounted() {
         axios
             .get('https://jsonsweeteaste.herokuapp.com/menu')
-            .then(response => (this.menu) = response.data)
+            .then((response) => {
+                this.menu = response.data
+                console.log(this.menu)
+            })
+            .catch((response) => {
+                console.log(response)
+                this.error = true
+            })
     },
     methods: {
         nextPage() {
@@ -18,6 +26,13 @@ new Vue({
             if (this.count === 2) {
                 this.btnStatus = false
             }
+        },
+        getRandom() {
+            var productmenu = []
+            for (var i = 0; i <= 6; i++) {
+                productmenu.push(Math.floor(Math.random() * this.menu.length))
+            }
+            console.log(productmenu)
         }
     }
 })
