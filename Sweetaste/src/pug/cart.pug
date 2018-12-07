@@ -5,10 +5,10 @@ block content
                     .mycart-container__list.mb-w-100
                         .mycart-container__list-title.mb-prl-0 您的購物車
                         ul.mycart-container__list-item
-                            li.border-b
-                                .mycart-container__list-item-img
+                            li.border-b(v-for="list in getRandom(3)")
+                                img.mycart-container__list-item-img.block(:src="list.url", alt="")
                                 .mycart-container__list-item-name
-                                    p 焦糖馬卡龍
+                                    p {{list.name}}
                                     p NT$ 450
                                 ul.mycart-container__list-item-box
                                     li -
@@ -17,30 +17,30 @@ block content
                                     li +
                                 .mycart-container__list-item-price NT$ 900
                                 i.far.fa-trash-alt
-                            li.border-b
-                                .mycart-container__list-item-img
-                                .mycart-container__list-item-name
-                                    p 焦糖馬卡龍
-                                    p NT$ 450
-                                ul.mycart-container__list-item-box
-                                    li -
-                                    li
-                                        input(type="text",value="2")
-                                    li +
-                                .mycart-container__list-item-price NT$ 900
-                                i.far.fa-trash-alt
-                            li.border-b
-                                .mycart-container__list-item-img
-                                .mycart-container__list-item-name
-                                    p 焦糖馬卡龍
-                                    p NT$ 450
-                                ul.mycart-container__list-item-box
-                                    li -
-                                    li
-                                        input(type="text",value="2")
-                                    li +
-                                .mycart-container__list-item-price NT$ 900
-                                i.far.fa-trash-alt
+                            //- li.border-b
+                            //-     .mycart-container__list-item-img
+                            //-     .mycart-container__list-item-name
+                            //-         p 焦糖馬卡龍
+                            //-         p NT$ 450
+                            //-     ul.mycart-container__list-item-box
+                            //-         li -
+                            //-         li
+                            //-             input(type="text",value="2")
+                            //-         li +
+                            //-     .mycart-container__list-item-price NT$ 900
+                            //-     i.far.fa-trash-alt
+                            //- li.border-b
+                            //-     .mycart-container__list-item-img
+                            //-     .mycart-container__list-item-name
+                            //-         p 焦糖馬卡龍
+                            //-         p NT$ 450
+                            //-     ul.mycart-container__list-item-box
+                            //-         li -
+                            //-         li
+                            //-             input(type="text",value="2")
+                            //-         li +
+                            //-     .mycart-container__list-item-price NT$ 900
+                            //-     i.far.fa-trash-alt
                     .mycart-container__order.mb-w-100
                         .mycart-container__order-summary
                             .mycart-container__order-summary-title 訂單摘要

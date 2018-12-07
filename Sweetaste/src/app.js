@@ -6,7 +6,7 @@ new Vue({
         displayStatus: true,
         btnStatus: true,
         menu: [],
-        error: false
+        error: false,
     },
     mounted() {
         axios
@@ -27,12 +27,14 @@ new Vue({
                 this.btnStatus = false
             }
         },
-        getRandom() {
+        getRandom(x) {
             var productmenu = []
-            for (var i = 0; i <= 6; i++) {
-                productmenu.push(Math.floor(Math.random() * this.menu.length))
+            for (var i = 0; i < x; i++) {
+                var random = (Math.floor(Math.random() * this.menu.length))
+                productmenu.push(this.menu[random])
             }
             console.log(productmenu)
+            return productmenu
         }
     }
 })

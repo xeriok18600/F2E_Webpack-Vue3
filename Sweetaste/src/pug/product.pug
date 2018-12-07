@@ -9,13 +9,13 @@ block content
                     .product__container--filter.mb-w-100
                         .filter-title 甜點類別
                         ul.filter-item
-                            li.now-select 所有甜點 ({{menu.length}})
-                            li 本日精選 ({{menu.slice(0,6).length}})
+                            li 所有甜點 ({{menu.length}})
+                            li.now-select 本日精選 ({{getRandom(6).length}})
                             li 人氣推薦 (0)
                             li 新品上市 (0)
                     .product__container--list.mb-mg-0-auto
                         ul.card-container.flex-justify-between
-                            li.card-container__product.mg-b-20(v-for="list in menu" )
+                            li.card-container__product.mg-b-20(v-for="list in getRandom(6)" )
                                 .card__product-img
                                     img.block(:src="list.url", alt="")
                                     .card__product-featured 本日精選
