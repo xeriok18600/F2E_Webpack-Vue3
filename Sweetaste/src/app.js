@@ -6,21 +6,22 @@ new Vue({
         displayStatus: true,
         btnStatus: true,
         menu: [],
-        error: false,
     },
-    mounted() {
-        axios
-            .get('https://jsonsweeteaste.herokuapp.com/menu')
-            .then((response) => {
-                this.menu = response.data
-                console.log(this.menu)
-            })
-            .catch((response) => {
-                console.log(response)
-                this.error = true
-            })
+    created() {
+        this.getData()
     },
     methods: {
+        getData() {
+            axios
+                .get('https://jsonsweeteaste.herokuapp.com/menu')
+                .then((res) => {
+                    this.menu = res.data
+                    console.log(this.menu)
+                })
+                .catch((res) => {
+                    console.log(res)
+                })
+        },
         nextPage() {
             this.count += 1
             if (this.count === 2) {
