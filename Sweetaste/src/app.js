@@ -6,6 +6,9 @@ new Vue({
         displayStatus: true,
         btnStatus: true,
         menu: [],
+        today_menu: [],
+        new_menu: [],
+        top_menu: []
     },
     created() {
         this.getData()
@@ -16,7 +19,6 @@ new Vue({
                 .get('https://jsonsweeteaste.herokuapp.com/menu')
                 .then((res) => {
                     this.menu = res.data
-                    console.log(this.menu)
                 })
                 .catch((res) => {
                     console.log(res)

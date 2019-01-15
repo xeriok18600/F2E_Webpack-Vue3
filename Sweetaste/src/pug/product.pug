@@ -10,18 +10,18 @@ block content
                         .filter-title 甜點類別
                         ul.filter-item
                             li 所有甜點 ({{menu.length}})
-                            li.now-select 本日精選 ({{getRandom(6).length}})
+                            li.now-select 本日精選 565
                             li 人氣推薦 (0)
                             li 新品上市 (0)
                     .product__container--list.mb-mg-0-auto
                         ul.card-container.flex-justify-between
-                            li.card-container__product.mg-b-20(v-for="list in getRandom(6)" )
+                            li.card-container__product.mg-b-20
                                 .card__product-img
-                                    img.block(:src="list.url", alt="")
+                                    img.block
                                     .card__product-featured 本日精選
                                     i.far.fa-heart
                                 .card__product-info
-                                    .card__info-name {{list.name}}
+                                    .card__info-name
                                     .card__info-price NT$ 450
                                 button 加入購物車
                         ul.pagination.j-center
